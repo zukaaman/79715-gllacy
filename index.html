@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Глейси</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
 	  <header class="main-header">
 	  	<a class="main-header-logo">	
-				<img src="http://placehold.it/154x64" width="154" height="64" alt="Логотип">
+				<img src="img/logo.svg" width="154" height="64" alt="Логотип">
 			</a>
 	  	<ul class="site-navigation">
 				<li>
@@ -39,29 +40,28 @@
 
 		  <section class="slider">
 		  	<h2 class="visually-hidden">Слайдер</h2>
-		  		<div class="slider-item" id="slider-item-1">
-		  			<p>Крем-брюле и пломбир с малиновым джемом</p>
-		  			<img src="http://placehold.it/1045x881" width="1045" height="881" alt="Крем-брюле и пломбир с малиновым джемом">
-		  			<button class="button" type="submit">Давайте оба!</button>
-		  		</div>
-		  		<div class="slider-item" id="slider-item-2">
+	  		<input type="radio" name="point" id="slide1" checked>
+				<input type="radio" name="point" id="slide2">
+				<input type="radio" name="point" id="slide3">
+				<div class="slider">
+					<div class="slides slide1">
+	  				<p>Крем-брюле и пломбир с малиновым джемом</p>
+    				<button class="button" type="submit">Давайте оба!</button>
+					</div>
+					<div class="slides slide2">
 		  			<p>Шоколадный пломбир и лимонный сорбет</p>
-		  			<img src="http://placehold.it/1045x881" width="1045" height="881" alt="Шоколадный пломбир и лимонный сорбет">
-		  			<button class="button" type="submit">Давайте оба!</button>
-		  		</div>
-		  		<div class="slider-item" id="slider-item-3">
+      			<button class="button" type="submit">Давайте оба!</button>
+					</div>
+					<div class="slides slide3">
 		  			<p>Пломбир с помадкой и клубничный щербет</p>
-		  			<img src="http://placehold.it/1045x881" width="1045" height="881" alt="Пломбир с помадкой и клубничный щербет">
-		  			<button class="button" type="submit">Давайте оба!</button>
-		  		</div>
-		  	<div class="slider-controls">
-					<a href="#slider-item-1" class="control-button">•</a>
-			    <a href="#slider-item-2" class="control-button">•</a>
-			    <a href="#slider-item-3" class="control-button">•</a>
-<!-- 			    <input type="radio" name="point" id="slider-item-1" checked>
-					<input type="radio" name="point" id="slider-item-2">
-					<input type="radio" name="point" id="slider-item-3"> -->
-			  </div>
+      			<button class="button" type="submit">Давайте оба!</button>
+					</div>
+				</div>
+				<div class="slider-controls">
+					<label for="slide1"></label>
+					<label for="slide2"></label>
+					<label for="slide3"></label>
+				</div>
 		  </section>
 
 		  <section class="actions">
@@ -84,28 +84,28 @@
 		  		<li class="gallery-item">
 		  			<h3>Сливочное с апельсиновым джемом и цитрксовой стружкой</h3>
 			  		<p class="gallery-item-image">	
-			  				<img src="http://placehold.it/267x267" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрксовой стружкой">
+			  				<img src="img/item-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрксовой стружкой">
 	  				</p>
 		  			<p class="gallery-item-price">310&#8381;<span>/кг</span></p>
 		  		</li>
 		  		<li class="gallery-item">
 		  			<h3>Сливочно-кофейное с кусочками шоколада</h3>
 		  			<p class="gallery-item-image">
-		  				<img src="http://placehold.it/267x267" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+		  				<img src="img/item-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
 	  				</p>
 		  			<p class="gallery-item-price">380&#8381;<span>/кг</span></p>
 		  		</li>
 		  		<li class="gallery-item">
 		  			<h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
 		  			<p class="gallery-item-image">
-		  				<img src="http://placehold.it/267x267" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+		  				<img src="img/item-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
 	  				</p>
 		  			<p class="gallery-item-price">355&#8381;<span>/кг</span></p>
 		  		</li>
 		  		<li class="gallery-item">
 		  			<h3>Сливочное крем-брюле с карамельной подливкой</h3>
 		  			<p class="gallery-item-image">
-		  				<img src="http://placehold.it/267x267" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+		  				<img src="img/item-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
 	  				</p>
 		  			<p class="gallery-item-price">415&#8381;<span>/кг</span></p>
 		  		</li>
@@ -173,7 +173,7 @@
 			</ul>
 			<div class="footer-copyright">
 				<a href="https://htmlacademy.ru/intensive/htmlcss">
-					<img src="http://placehold.it/108x39" width="108" height="39" alt="HTML Academy">
+					<img src="img/logo-htmlacademy.svg" width="108" height="39" alt="HTML Academy">
 				</a>
 				<p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &#169; 2017</p>
 			</div>
