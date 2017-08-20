@@ -26,9 +26,25 @@
 				<li><a href="#">О Компании</a></li>
 			</ul>
 			<ul class="user-navigation">
-				<li class="search-link"></li>
-				<li class="login-link">Вход</li>
-				<li class="basket-link">Корзина</li>
+				<li class="search-link">
+					<button class="button">Поиск</button>
+					<input type="text" name="search" placeholder="Что ищем?">
+				</li>
+				<li class="login-link">
+					<button class="button">Вход</button>
+					<form class="login-form" method="get" action="https://echo.htmlacademy.ru">
+						<label class="visually-hidden" for="login-form-email">Электронная почта</label>
+						<input type="text" id="login-form-email" name="email" placeholder="Электронная почта">
+						<label class="visually-hidden" for="login-form-password">Пароль</label>
+						<input type="password" name="password" id="login-form-password" placeholder="Пароль">
+						<button class="button" type="submit">Войти</button>
+						<a class="restore" href="#">Забыли пароль?</a>
+						<a class="restore" href="#">Новая регистрация</a>
+					</form>
+				</li>
+				<li class="basket-link">
+					<button class="button">Корзина</button>
+				</li>
 			</ul>
 			<p>С 10 до 20, ежедневно</p>
 			<p>8 812 450-25-25</p>
@@ -139,8 +155,9 @@
 		  	<h2 class="visually-hidden">Подписка на рассылку</h2>
 		  	<p>Подпишитель на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
 		  	<form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
-		  		<input type="text" name="email" placeholder="Электронная почта">
-		  		<button class="button">Отправить</button>
+		  		<label class="visually-hidden" for="filter-subsription">Электронная почта</label>
+		  		<input type="text" name="email" id="filter-subsription" placeholder="Электронная почта">
+		  		<button class="button" type="submit">Отправить</button>
 		  	</form>
 		  </section>
 
@@ -166,10 +183,10 @@
 				</ul>
 			</div>
 			<ul class="footer-info">
-				<li>Для поставщиков</li>
-				<li>Наши документы</li>
-				<li>О производстве</li>
-				<li>Экологические стандарты</li>
+				<li><a href="#">Для поставщиков</a></li>
+				<li><a href="#">Наши документы</a></li>
+				<li><a href="#">О производстве</a></li>
+				<li><a href="#">Экологические стандарты</a></li>
 			</ul>
 			<div class="footer-copyright">
 				<a href="https://htmlacademy.ru/intensive/htmlcss">
@@ -178,6 +195,19 @@
 				<p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &#169; 2017</p>
 			</div>
 	  </footer>
+
+	  <section class="modal feedback">
+	  	<h2>Мы обязательно ответим!</h2>
+	  	<form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+	  		<label class="visually-hidden" for="feedback-name">Имя</label>
+	  		<input type="text" name="name" id="feedback-name" placeholder="Как вас зовут?">
+	  		<label class="visually-hidden" for="feedback-email">Ваша почта?</label>
+	  		<input type="text" name="email" id="feedback-email" placeholder="Ваша почта для ответа?">
+	  		<label class="visually-hidden" for="feedback-text">Ваш текст</label>
+	  		<textarea name="text" id="feedback-text" placeholder="Напишите что-нибудь..."></textarea>
+	  		<button class="button" type="submit">Отправить</button>
+	  	</form>	  	
+	  </section>
 
   </body>
 </html>
