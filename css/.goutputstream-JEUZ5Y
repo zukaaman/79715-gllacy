@@ -243,7 +243,6 @@ a {
 
 .main-slider {
   width: 1200px;
-  margin: 0 auto;
 }
 
 .slider {
@@ -833,6 +832,7 @@ display: none;
 }
 
 .site-navigation {
+  display: flex;
   margin: 0;
   margin-right: auto;
   padding: 0;
@@ -845,6 +845,7 @@ display: none;
 }
 
 .user-navigation {
+  display: flex;
   justify-content: flex-end;
   padding: 0;
   margin: 0;
