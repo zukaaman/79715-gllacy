@@ -22,7 +22,7 @@
               <img src="img/logo.svg" width="154" height="64" alt="Логотип">
             </a>
             <ul class="site-navigation">
-              <li class="inner-list-show">
+              <li class="site-navigation-item inner-list-show">
                 <a href="#">Каталог</a>
                 <div class="site-navigation-wrapper">
                   <ul class="inner-list">
@@ -37,8 +37,8 @@
                   </ul>
                 </div>
               </li>
-              <li><a href="#">Доставка и оплата</a></li>
-              <li><a href="#">О Компании</a></li>
+              <li class="site-navigation-item"><a href="#">Доставка и оплата</a></li>
+              <li class="site-navigation-item"><a href="#">О Компании</a></li>
             </ul>
             <ul class="user-navigation">
               <li class="search-link">
@@ -124,7 +124,7 @@
           <h2 class="visually-hidden">Галерея</h2>
           <ul class="gallery-list">
             <li class="gallery-item">
-              <h3>Сливочное с апельсиновым джемом и цитрксовой стружкой</h3>
+              <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
               <p class="gallery-item-image">
                 <img src="img/item-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрксовой стружкой">
               </p>
@@ -255,17 +255,28 @@
         </div>
       </footer>
 
-      <section class="modal feedback" id="openmodal">
-        <h2>Мы обязательно ответим!</h2>
-        <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-          <label class="visually-hidden" for="feedback-name">Имя</label>
-          <input type="text" name="name" id="feedback-name" placeholder="Как вас зовут?">
-          <label class="visually-hidden" for="feedback-email">Ваша почта?</label>
-          <input type="text" name="email" id="feedback-email" placeholder="Ваша почта для ответа?">
-          <label class="visually-hidden" for="feedback-text">Ваш текст</label>
-          <textarea name="text" id="feedback-text" placeholder="Напишите что-нибудь..."></textarea>
-          <button class="button orange-button" type="submit">Отправить</button>
-        </form>
+      <section class="feedback" id="openmodal">
+        <div class="feedback-wrapper">
+          <h2>Мы обязательно вам ответим!</h2>
+          <button class="modal-close button"><span class="visually-hidden">Закрыть</span></button>
+          <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+            <p>
+              <label class="visually-hidden" for="feedback-name">Имя</label>
+              <input type="text" name="name" id="feedback-name" placeholder="Как вас зовут?">
+            </p>
+            <p>
+              <label class="visually-hidden" for="feedback-email">Ваша почта?</label>
+              <input type="text" name="email" id="feedback-email" placeholder="Ваша почта для ответа?">
+            </p>
+            <p>
+              <label class="visually-hidden" for="feedback-text">Ваш текст</label>
+              <textarea name="text" rows="6" id="feedback-text" placeholder="Напишите что-нибудь..."></textarea>
+            </p>
+            <p>
+              <button class="button orange-button" type="submit">Отправить</button>
+            </p>
+          </form>
+        </div>
       </section>
 
     </div>

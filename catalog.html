@@ -16,7 +16,7 @@
             <img src="img/logo.svg" width="154" height="64" alt="Логотип">
           </a>
           <ul class="site-navigation">
-            <li class="inner-list-show site-navigation-current">
+            <li class="site-navigation-item inner-list-show site-navigation-current">
               <a href="#">Каталог</a>
               <div class="site-navigation-wrapper">
                 <ul class="inner-list">
@@ -28,8 +28,8 @@
                 </ul>
               </div>
             </li>
-            <li><a href="#">Доставка и оплата</a></li>
-            <li><a href="#">О Компании</a></li>
+            <li class="site-navigation-item"><a href="#">Доставка и оплата</a></li>
+            <li class="site-navigation-item"><a href="#">О Компании</a></li>
           </ul>
           <ul class="user-navigation">
             <li class="search-link">
@@ -63,6 +63,31 @@
             </li>
             <li class="basket-link">
               <button class="button basket-link-button"><span>2 товара</span></button>
+              <div class="basket-link-wrapper">
+                <form method="get" action="https://echo.htmlacademy.ru">
+                  <div class="basket-table">
+                    <div>
+                      <p><a class="cancel" href="#"><span class="visually-hidden">Отменить</span></a></p>
+                      <p><img src="img/item-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом"></p>
+                      <p>Пломбир с апельсиновым джемом</p>
+                      <p>1,5 кг х <span>200 руб.</span></p>
+                      <p>300 руб.</p>
+                    </div>
+                    <div>
+                      <p><a class="cancel" href="#"><span class="visually-hidden">Отменить</span></a></p>
+                      <p><img src="img/item-3.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></p>
+                      <p>Клубничный пломбир с присыпкой<br> из белого шоколада</p>
+                      <p>1,5 кг х <span>300 руб.</span></p>
+                      <p>450 руб.</p>
+                    </div>
+                  </div>
+                  <div class="delimiter"></div>
+                  <div class="basket-price">Итого: 750 руб.</div>
+                  <div class="basket-button">
+                    <button class="button orange-button" type="submit">Оформить заказ</button>
+                  </div>
+                </form>
+              </div>
             </li>
           </ul>
         </nav>
@@ -97,7 +122,11 @@
             <legend>Цена: 100 руб. &mdash; 500 руб.</legend>
             <div class="price-wrapper">
               <label class="visually-hidden" for="price-count-label">Диапазон цен</label>
-              <input type="range" name="price-count" id="price-count-label" min="100" max="500" step="5">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="range-toggle range-toggle-min"></div>
+              <div class="range-toggle range-toggle-max"></div>
             </div>
           </fieldset>
           <fieldset class="fatness">
@@ -128,23 +157,23 @@
             <div class="fillers-wrapper">
               <ul class="fillers-list">
                 <li class="fillers-option">
-                  <input class="fillers-input" id="filter-chokolate" type="checkbox" name="chocolate" checked>
+                  <input class="fillers-input visually-hidden" id="filter-chokolate" type="checkbox" name="chocolate" checked>
                   <label for="filter-chokolate">шоколадные</label>
                 </li>
                 <li class="fillers-option">
-                  <input class="fillers-input" id="filter-sugar-powders" type="checkbox" name="sugar-powders" checked>
+                  <input class="fillers-input visually-hidden" id="filter-sugar-powders" type="checkbox" name="sugar-powders" checked>
                   <label for="filter-sugar-powders">сахарные присыпки</label>
                 </li>
                 <li class="fillers-option">
-                  <input class="fillers-input" id="filter-fruits" type="checkbox" name="fruits">
+                  <input class="fillers-input visually-hidden" id="filter-fruits" type="checkbox" name="fruits">
                   <label for="filter-fruits">фрукты</label>
                 </li>
                 <li class="fillers-option">
-                  <input class="fillers-input" id="filter-syrups" type="checkbox" name="syrups">
+                  <input class="fillers-input visually-hidden" id="filter-syrups" type="checkbox" name="syrups">
                   <label for="filter-syrups">сиропы</label>
                 </li>
                 <li class="fillers-option">
-                  <input class="fillers-input" id="filter-jams" type="checkbox" name="jams">
+                  <input class="fillers-input visually-hidden" id="filter-jams" type="checkbox" name="jams">
                   <label for="filter-jams">джемы</label>
                 </li>
               </ul>
