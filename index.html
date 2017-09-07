@@ -281,5 +281,25 @@
 
     </div>
 
+    <script>
+
+      var link = document.querySelector(".map-wrapper .button");
+      var popup = document.querySelector(".feedback");
+      var close = document.querySelector(".modal-close");
+      var login = popup.querySelector("[name=name]");
+
+      link.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.add("feedback-open");
+        login.focus();
+      });
+
+      close.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.remove("feedback-open");
+      });
+
+    </script>
+
   </body>
 </html>
