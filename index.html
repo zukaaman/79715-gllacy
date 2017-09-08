@@ -44,8 +44,9 @@
               <li class="search-link">
                 <button class="button search-link-button"><span class="visually-hidden">Поиск</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17"><path fill="#fff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/></svg></button>
                 <div class="search-link-wrapper">
-                  <label class="visually-hidden" for="search-label">Поиск</label>
                   <input type="text" name="search" id="search-label" placeholder="Что ищем?">
+                  <!-- <label class="visually-hidden" for="search-label">Поиск</label> -->
+                  <label for="search-label">Что ищем?</label>
                 </div>
               </li>
               <li class="login-link">
@@ -53,12 +54,14 @@
                 <div class="login-link-wrapper">
                   <form class="login-form" method="get" action="https://echo.htmlacademy.ru">
                     <div>
-                      <label class="visually-hidden" for="login-form-email">Электронная почта</label>
-                      <input type="text" id="login-form-email" name="email" placeholder="Электронная почта">
+                      <!-- <label class="visually-hidden" for="login-form-email">Электронная почта</label> -->
+                      <input type="text" id="login-form-email" name="email" placeholder="Электронная почта" required>
+                      <label for="login-form-email">Электронная почта</label>
                     </div>
                     <div>
-                      <label class="visually-hidden" for="login-form-password">Пароль</label>
-                      <input type="password" name="password" id="login-form-password" placeholder="Пароль">
+                      <!-- <label class="visually-hidden" for="login-form-password">Пароль</label> -->
+                      <input type="password" name="password" id="login-form-password" placeholder="Пароль" required>
+                      <label for="login-form-password">Пароль</label>
                     </div>
                     <div>
                       <button class="button orange-button" type="submit">Войти</button>
@@ -72,6 +75,31 @@
               </li>
               <li class="basket-link">
                 <button class="button basket-link-button"><span>Пусто</span></button>
+                <div class="basket-link-wrapper">
+                <form method="get" action="https://echo.htmlacademy.ru">
+                  <div class="basket-table">
+                    <div>
+                      <p><a class="cancel" href="#"><span class="visually-hidden">Отменить</span></a></p>
+                      <p><img src="img/item-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом"></p>
+                      <p>Пломбир с апельсиновым джемом</p>
+                      <p>1,5 кг х <span>200 руб.</span></p>
+                      <p>300 руб.</p>
+                    </div>
+                    <div>
+                      <p><a class="cancel" href="#"><span class="visually-hidden">Отменить</span></a></p>
+                      <p><img src="img/item-3.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></p>
+                      <p>Клубничный пломбир с присыпкой<br> из белого шоколада</p>
+                      <p>1,5 кг х <span>300 руб.</span></p>
+                      <p>450 руб.</p>
+                    </div>
+                  </div>
+                  <div class="delimiter"></div>
+                  <div class="basket-price">Итого: 750 руб.</div>
+                  <div class="basket-button">
+                    <button class="button orange-button" type="submit">Оформить заказ</button>
+                  </div>
+                </form>
+              </div>
               </li>
             </ul>
           </nav>
@@ -201,8 +229,9 @@
               <h2 class="visually-hidden">Подписка на рассылку</h2>
               <p>Подпишитель на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
               <form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
-                <label class="visually-hidden" for="filter-subsription">Электронная почта</label>
+                <!-- <label class="visually-hidden" for="filter-subsription">Электронная почта</label> -->
                 <input type="text" name="email" id="filter-subsription" placeholder="Электронная почта">
+                <label for="filter-subsription">Электронная почта</label>
                 <button class="button orange-button" type="submit">Отправить</button>
               </form>
             </div>
@@ -261,16 +290,19 @@
           <button class="modal-close button"><span class="visually-hidden">Закрыть</span></button>
           <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
             <p>
-              <label class="visually-hidden" for="feedback-name">Имя</label>
+              <!-- <label class="visually-hidden" for="feedback-name">Имя</label> -->
               <input type="text" name="name" id="feedback-name" placeholder="Как вас зовут?">
+              <label for="feedback-name">Как вас зовут?</label>
             </p>
             <p>
-              <label class="visually-hidden" for="feedback-email">Ваша почта?</label>
+              <!-- <label class="visually-hidden" for="feedback-email">Ваша почта?</label> -->
               <input type="text" name="email" id="feedback-email" placeholder="Ваша почта для ответа?">
+              <label for="feedback-email">Ваша почта для ответа?</label>
             </p>
             <p>
-              <label class="visually-hidden" for="feedback-text">Ваш текст</label>
+              <!-- <label class="visually-hidden" for="feedback-text">Ваш текст</label> -->
               <textarea name="text" rows="6" id="feedback-text" placeholder="Напишите что-нибудь..."></textarea>
+              <label for="feedback-text">Напишите что-нибудь...</label>
             </p>
             <p>
               <button class="button orange-button" type="submit">Отправить</button>
@@ -280,6 +312,9 @@
       </section>
 
     </div>
+
+    <script src="js/feedback.js"></script>
+    <script src="js/basket.js"></script>
 
   </body>
 </html>

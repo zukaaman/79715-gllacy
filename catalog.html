@@ -35,8 +35,9 @@
             <li class="search-link">
               <button class="button search-link-button"><span class="visually-hidden">Поиск</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17"><path fill="#fff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/></svg></button>
               <div class="search-link-wrapper">
-                <label class="visually-hidden" for="search-label">Поиск</label>
                 <input type="text" name="search" id="search-label" placeholder="Что ищем?">
+                <!-- <label class="visually-hidden" for="search-label">Поиск</label> -->
+                <label for="search-label">Что ищем?</label>
               </div>
             </li>
             <li class="login-link">
@@ -44,12 +45,14 @@
               <div class="login-link-wrapper">
                 <form class="login-form" method="get" action="https://echo.htmlacademy.ru">
                   <div>
-                    <label class="visually-hidden" for="login-form-email">Электронная почта</label>
-                    <input type="text" id="login-form-email" name="email" placeholder="Электронная почта">
+                    <!-- <label class="visually-hidden" for="login-form-email">Электронная почта</label> -->
+                    <input type="text" id="login-form-email" name="email" placeholder="Электронная почта" required>
+                    <label for="login-form-email">Электронная почта</label>
                   </div>
                   <div>
-                    <label class="visually-hidden" for="login-form-password">Пароль</label>
-                    <input type="password" name="password" id="login-form-password" placeholder="Пароль">
+                    <!-- <label class="visually-hidden" for="login-form-password">Пароль</label> -->
+                    <input type="password" name="password" id="login-form-password" placeholder="Пароль" required>
+                    <label for="login-form-password">Пароль</label>
                   </div>
                   <div>
                     <button class="button orange-button" type="submit">Войти</button>
@@ -62,8 +65,8 @@
               </div>
             </li>
             <li class="basket-link">
-              <button class="button basket-link-button"><span>2 товара</span></button>
-              <div class="basket-link-wrapper">
+              <button class="button basket-link-button basket-button-full"><span>2 товара</span></button>
+              <div class="basket-link-wrapper basket-full">
                 <form method="get" action="https://echo.htmlacademy.ru">
                   <div class="basket-table">
                     <div>

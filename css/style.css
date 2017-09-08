@@ -51,14 +51,14 @@ input[type="checkbox"].visually-hidden {
   background-repeat: no-repeat;
   background-position: top center;
 
-/*  -webkit-transition: background-image 0.5s ease, background-color 0.5s ease;
+  -webkit-transition: background-image 0.5s ease, background-color 0.5s ease;
 
   -o-transition: background-image 0.5s ease, background-color 0.5s ease;
 
-  transition: background-image 0.5s ease, background-color 0.5s ease;*/
+  transition: background-image 0.5s ease, background-color 0.5s ease;
 }
 
-.site-wrapper::before,
+/*.site-wrapper::before,
 .site-wrapper::after {
   content: "";
 
@@ -66,12 +66,12 @@ input[type="checkbox"].visually-hidden {
 }
 
 .site-wrapper::before {
-  background-image: url("slide-2.png");
+  background-image: url("../img/slider-2.png");
 }
 
 .site-wrapper::after {
-  background-image: url("slide-3.png");
-}
+  background-image: url("../img/slider-3.png");
+}*/
 
 .button {
   font: inherit;
@@ -403,6 +403,52 @@ input[type="checkbox"].visually-hidden {
   outline: none;
 }
 
+.search-link label,
+.login-link label,
+.subscription-form label {
+  display: none;
+}
+
+.search-link input:focus ~ label {
+  position: absolute;
+  top: 5px;
+  left: 25px;
+
+  display: block;
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: 400;
+  color: #8fbdec;
+}
+
+.login-link input:focus ~ label {
+  position: absolute;
+  top: -15px;
+  left: 13px;
+
+  display: block;
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: 400;
+  color: #8fbdec;
+}
+
+.subscription-form input:focus ~ label {
+  position: absolute;
+  top: -12px;
+  left: 13px;
+
+  display: block;
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: 400;
+  color: #8fbdec;
+}
+
+.login-link input:not(:focus):valid ~ label {
+  color: #999999;
+}
+
 .login-link {
   position: relative;
 
@@ -455,6 +501,8 @@ input[type="checkbox"].visually-hidden {
 }
 
 .login-form div {
+  position: relative;
+
   margin: 20px;
 }
 
@@ -554,7 +602,7 @@ input[type="checkbox"].visually-hidden {
           box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
-.basket-link:hover .basket-link-wrapper {
+.basket-link:hover .basket-full {
   display: block;
 }
 
@@ -627,6 +675,8 @@ input[type="checkbox"].visually-hidden {
 
 .basket-link-button {
   position: relative;
+
+  width: 118px;
 }
 
 .basket-link-button span {
@@ -685,7 +735,7 @@ input[type="checkbox"].visually-hidden {
   background-color: #999999;
 }
 
-.inner-page .basket-link-button span::before {
+.basket-button-full span::before {
   content: "";
 
   position: absolute;
@@ -699,10 +749,15 @@ input[type="checkbox"].visually-hidden {
   background-image: url("../img/basket-red.svg");
 }
 
-.inner-page .basket-link-button {
+.user-navigation .basket-button-full {
   color: #323232;
 
   background-color: #f8f7f4;
+}
+
+.basket-button-full:hover span::before {
+  background-image: url("../img/basket-red.svg");
+  background-repeat: no-repeat;
 }
 
 .header-time {
@@ -1266,6 +1321,8 @@ input[type="checkbox"].visually-hidden {
 }
 
 .subscription-form {
+  position: relative;
+
   margin: 36px 20px;
 }
 
@@ -1597,6 +1654,32 @@ input[type="checkbox"].visually-hidden {
   background-repeat: no-repeat;
 }
 
+#filter-fat-0:checked:hover ~ label[for="filter-fat-0"]::before,
+#filter-fat-10:checked:hover ~ label[for="filter-fat-10"]::before,
+#filter-fat-30:checked:hover ~ label[for="filter-fat-30"]::before,
+#filter-fat-up-30:checked:hover ~ label[for="filter-fat-up-30"]::before {
+  background-image: url("../img/radio-on-hover.svg");
+  background-repeat: no-repeat;
+}
+
+#filter-fat-0:checked:disabled ~ label[for="filter-fat-0"]::before,
+#filter-fat-10:checked:disabled ~ label[for="filter-fat-10"]::before,
+#filter-fat-30:checked:disabled ~ label[for="filter-fat-30"]::before,
+#filter-fat-up-30:checked:disabled ~ label[for="filter-fat-up-30"]::before {
+  background-image: url("../img/radio-on-disabled.svg");
+  background-repeat: no-repeat;
+}
+
+.fat-filter:hover {
+  background-image: url("../img/radio-off-hover.svg");
+  background-repeat: no-repeat;
+}
+
+.fat-filter:disabled {
+  background-image: url("../img/radio-off-disabled.svg");
+  background-repeat: no-repeat;
+}
+
 .fillers-wrapper {
   height: 36px;
   border-radius: 20px;
@@ -1649,6 +1732,34 @@ input[type="checkbox"].visually-hidden {
 #filter-syrups:checked ~ label[for="filter-syrups"]::before,
 #filter-jams:checked ~ label[for="filter-jams"]::before {
   background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+}
+
+#filter-chokolate:checked:hover ~ label[for="filter-chokolate"]::before,
+#filter-sugar-powders:checked:hover ~ label[for="filter-sugar-powders"]::before,
+#filter-fruits:checked:hover ~ label[for="filter-fruits"]::before,
+#filter-syrups:checked:hover ~ label[for="filter-syrups"]::before,
+#filter-jams:checked:hover ~ label[for="filter-jams"]::before {
+  background-image: url("../img/checkbox-on-hover.svg");
+  background-repeat: no-repeat;
+}
+
+#filter-chokolate:checked:disabled ~ label[for="filter-chokolate"]::before,
+#filter-sugar-powders:checked:disabled ~ label[for="filter-sugar-powders"]::before,
+#filter-fruits:checked:disabled ~ label[for="filter-fruits"]::before,
+#filter-syrups:checked:disabled ~ label[for="filter-syrups"]::before,
+#filter-jams:checked:disabled ~ label[for="filter-jams"]::before {
+  background-image: url("../img/checkbox-on-disabled.svg");
+  background-repeat: no-repeat;
+}
+
+.fillers-input:hover {
+  background-image: url("../img/checkbox-off-hover.svg");
+  background-repeat: no-repeat;
+}
+
+.fillers-input:disabled {
+  background-image: url("../img/checkbox-off-disabled.svg");
   background-repeat: no-repeat;
 }
 
@@ -1934,6 +2045,13 @@ input[type="checkbox"].visually-hidden {
 
 .feedback-open {
   display: block;
+  animation-name: bounce;
+  animation-duration: 0.2s;
+}
+
+@keyframes bounce {
+  0%   { transform: scale(2); }
+  100% { transform: scale(1); }
 }
 
 .feedback-wrapper {
@@ -1975,13 +2093,54 @@ input[type="checkbox"].visually-hidden {
   background-color: transparent;
 }
 
+.modal-error {
+  animation: shake 0.6s;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+
+  30%,
+  70% {
+    transform: scale(1);
+  }
+
+  40%,
+  80% {
+    transform: scale(1.1);
+  }
+}
+
 .feedback-form {
   margin: 0 24px 25px 24px;
 }
 
 .feedback-form p {
+  position: relative;
+
   margin: 0;
   margin-bottom: 20px;
+}
+
+.feedback-form label {
+  display: none;
+}
+
+.feedback-form input:focus ~ label,
+.feedback-form textarea:focus ~ label {
+  position: absolute;
+  top: -15px;
+  left: 13px;
+
+  display: block;
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: 400;
+  color: #8fbdec;
 }
 
 .feedback-form input,
