@@ -1350,6 +1350,7 @@ input[type="checkbox"].visually-hidden {
   position: absolute;
 
   width: 550px;
+  height: 210px;
 
   background-color: #f8f7f4;
   margin: 5px;
@@ -1370,7 +1371,7 @@ input[type="checkbox"].visually-hidden {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 368px;
-  padding: 9px 14px 9px 14px;
+  padding: 14px 14px;
   border-radius: 5px;
   border: none;
 
@@ -1399,7 +1400,7 @@ input[type="checkbox"].visually-hidden {
 
 .subscription-form .button {
   margin-left: 12px;
-  padding: 9px 17px 11px 17px;
+  padding: 10px 17px;
   border-radius: 20px;
 
   font-size: 18px;
