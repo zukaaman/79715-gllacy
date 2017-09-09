@@ -1003,8 +1003,7 @@ input[type="checkbox"].visually-hidden {
 
 .actions p {
   margin: 0;
-  margin-top: 15px;
-  margin-left: 20px;
+  margin: 15px 20px 44px 20px;
 
   font-size: 18px;
   line-height: 22px;
@@ -1016,7 +1015,7 @@ input[type="checkbox"].visually-hidden {
 
   display: inline-block;
   padding: 10px 25px;
-  margin: 44px 20px 22px 0;
+  margin: 0 20px 22px 0;
   border-radius: 25px;
   text-align: center;
 
@@ -1349,6 +1348,8 @@ input[type="checkbox"].visually-hidden {
 
 .subscription-wrapper {
   position: absolute;
+
+  width: 550px;
 
   background-color: #f8f7f4;
   margin: 5px;
@@ -2033,7 +2034,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .footer-copyright {
-  width: 190px;
+  width: 200px;
   margin-left: auto;
 }
 
