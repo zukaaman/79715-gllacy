@@ -679,6 +679,10 @@ input[type="checkbox"].visually-hidden {
   color: #999999;
 }
 
+.basket-table img {
+  border-radius: 50%;
+}
+
 .basket-link form {
   width: 510px;
   margin: 20px 15px;
@@ -924,7 +928,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .slide .button {
-  padding: 12px 50px;
+  padding: 10px 40px;
 
   font-size: 32px;
   line-height: 44px;
@@ -1017,6 +1021,10 @@ input[type="checkbox"].visually-hidden {
   list-style: none;
 }
 
+.catalog {
+  margin-bottom: 40px;
+}
+
 .gallery-item,
 .catalog-item {
   position: relative;
@@ -1040,7 +1048,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .catalog-item {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .gallery-item h3,
@@ -1092,17 +1100,12 @@ input[type="checkbox"].visually-hidden {
 
 .gallery-item-price span,
 .catalog-item-price span {
-  padding-left: 40px;
-
   font-size: 30px;
 }
 
 .gallery-item-price span::before,
 .catalog-item-price span::before {
   content: "";
-  position: absolute;
-  top: 5px;
-  left: 78px;
 
   display: inline-block;
   width: 31px;
