@@ -2062,6 +2062,11 @@ input[type="checkbox"].visually-hidden {
   font-weight: 400;
 }
 
+.footer-copyright svg {
+  width: 108px;
+  height: auto;
+}
+
 .footer-copyright > a {
   border: none;
 }
